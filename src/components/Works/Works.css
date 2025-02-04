@@ -1,0 +1,215 @@
+/* Container for Works */
+.works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+/* Carousel: Horizontal Scroll Section */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 33%; /* Adjusting to have enough space between items */
+  text-align: center;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  position: relative;
+  margin: 0 10px; /* Adding space between items */
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease-in-out;
+  object-fit: cover;
+}
+
+/* Center Image - Highlighted */
+.center {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Left Image */
+.left {
+  transform: translateX(-150px) scale(0.9);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* Right Image */
+.right {
+  transform: translateX(150px) scale(0.9);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* Hide other images */
+.hidden {
+  display: none;
+}
+
+/* Project Name Styling */
+.project-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: linear-gradient(45deg, #ff4c4c, #ff8c00);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.carousel-item:hover .project-name {
+  color: #ff4c4c;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Overlay with Buttons */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item:hover .middle {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Visit Website & GitHub Buttons */
+.middle button {
+  background-color: #ff4c4c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.middle button:hover {
+  background-color: #cc0000;
+}
+
+.middle button a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Visit Website Button */
+.visit-btn {
+  background-color: #1e90ff;
+  font-weight: 500;
+}
+
+.visit-btn:hover {
+  background-color: #007bff;
+}
+
+/* GitHub Source Button */
+.github-btn {
+  background-color: #333;
+  font-weight: 500;
+}
+
+.github-btn:hover {
+  background-color: #000;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .carousel {
+    height: 380px;
+  }
+
+  .carousel-item {
+    flex: 0 0 45%;
+  }
+
+  .left {
+    transform: translateX(-120px) scale(0.9);
+  }
+  .right {
+    transform: translateX(120px) scale(0.9);
+  }
+
+  .middle button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .project-name {
+    font-size: 16px;
+  }
+}

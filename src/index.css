@@ -1,13 +1,39 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure all elements are constrained within the viewport */
+* {
+  max-width: 100%;
+}
+
+/* Add this if a specific section is causing overflow */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure media queries properly target small screens */
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
 }
