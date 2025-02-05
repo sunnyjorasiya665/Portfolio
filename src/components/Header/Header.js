@@ -65,13 +65,13 @@ const Header = () => {
             </button>
             <a
               href="upi://pay?pa=sjorasiya665-1@oksbi&pn=Sunny%20Jorasiya&am=1000&cu=INR"
-              target="_blank"
+              target="_blank rel="noopener noreferrer""
             >
               <i className="fa-brands fa-google-pay"></i>
             </a>
             <a
               href="upi://pay?pa=8053854156@amazonpay&pn=Sunny%20Jorasiya&am=1000&cu=INR"
-              target="_blank"
+              target="_blank rel="noopener noreferrer""
             >
               <i class="fa-brands fa-amazon-pay"></i>
             </a>
